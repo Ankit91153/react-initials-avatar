@@ -1,4 +1,3 @@
-import React from "react";
 import { getInitials, type InitialOptions } from "../utils/getInitials";
 
 interface StyleProps {
@@ -20,11 +19,11 @@ interface Props {
   options?: InitialOptions;
 }
 
-const GenerateAvatarConfig: React.FC<Props> = ({
+const GenerateAvatarConfig = ({
   name,
   styles = {},
   options = {},
-}) => {
+}: Props) => {
   const {
     size = 50,
     radius = "50%",
