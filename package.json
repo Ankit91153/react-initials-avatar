@@ -1,0 +1,48 @@
+{
+  "name": "react-initials-avatar",
+  "version": "1.0.0",
+  "description": "Customizable initials-based avatar component for React applications.",
+  "keywords": ["react", "avatar", "initials", "react-avatar", "profile-avatar"],
+  "author": "Ankit Kumar Pandey",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ankit91153/react-initials-avatar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ankit91153/react-initials-avatar/issues"
+  },
+  "homepage": "https://github.com/Ankit91153/react-initials-avatar#readme",
+  "type": "module",
+  "main": "./dist/react-initials-avatar.umd.js",
+  "module": "./dist/react-initials-avatar.es.js",
+  "types": "./dist/main.d.ts",
+  "files": ["dist"],
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.3",
+    "@types/react": "^18.3.28",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^5.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.1"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build:types && vite build",
+    "build:types": "tsc --project tsconfig.build.json",
+    "lint": "eslint .",
+    "prepare": "npm run build"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/react-initials-avatar.es.js",
+      "require": "./dist/react-initials-avatar.umd.js"
+    }
+  }
+}
