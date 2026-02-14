@@ -1,6 +1,6 @@
 {
   "name": "react-intials-avatar-generator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Customizable initials-based avatar component for React applications.",
   "keywords": ["react", "avatar", "initials", "react-avatar", "profile-avatar"],
   "author": "Ankit Kumar Pandey",
