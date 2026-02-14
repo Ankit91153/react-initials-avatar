@@ -14,25 +14,25 @@ A lightweight, customizable React component for generating beautiful initials-ba
 ## Installation
 
 ```bash
-npm install react-initials-avatar
+npm install react-intials-avatar-generator
 ```
 
 or
 
 ```bash
-yarn add react-initials-avatar
+yarn add react-intials-avatar-generator
 ```
 
 or
 
 ```bash
-pnpm add react-initials-avatar
+pnpm add react-intials-avatar-generator
 ```
 
 ## Basic Usage
 
 ```jsx
-import { InitialsAvatar } from 'react-initials-avatar';
+import { InitialsAvatar } from 'react-intials-avatar-generator';
 
 function App() {
   return (
@@ -205,8 +205,8 @@ The component intelligently extracts initials from names:
 The package includes full TypeScript definitions:
 
 ```typescript
-import { InitialsAvatar } from 'react-initials-avatar';
-import type { StyleProps, InitialOptions } from 'react-initials-avatar';
+import { InitialsAvatar } from 'react-intials-avatar-generator';
+import type { StyleProps, InitialOptions } from 'react-intials-avatar-generator';
 
 const styles: StyleProps = {
   size: 60,
