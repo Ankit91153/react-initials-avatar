@@ -1,6 +1,6 @@
 {
   "name": "react-intials-avatar-generator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Customizable initials-based avatar component for React applications.",
   "keywords": ["react", "avatar", "initials", "react-avatar", "profile-avatar"],
   "author": "Ankit Kumar Pandey",
@@ -17,7 +17,7 @@
   "main": "./dist/react-initials-avatar.umd.js",
   "module": "./dist/react-initials-avatar.es.js",
   "types": "./dist/main.d.ts",
-  "files": ["dist/*.js", "dist/*.d.ts"],
+  "files": ["dist"],
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18"
@@ -34,7 +34,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run build:types && vite build",
+    "build": "vite build && npm run build:types",
     "build:types": "tsc --project tsconfig.build.json",
     "lint": "eslint .",
     "prepare": "npm run build"

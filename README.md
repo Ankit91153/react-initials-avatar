@@ -1,4 +1,4 @@
-# React Initials Avatar
+# React Initials Avatar Generator
 
 A lightweight, customizable React component for generating beautiful initials-based avatars. Perfect for user profiles, contact lists, and any application that needs elegant placeholder avatars.
 
@@ -7,9 +7,11 @@ A lightweight, customizable React component for generating beautiful initials-ba
 - 🎨 Fully customizable colors, sizes, and styles
 - 🔤 Smart initials extraction from names
 - 📦 Zero dependencies (except React)
-- 🎯 TypeScript support
-- ⚡ Lightweight and performant
+- 🎯 Full TypeScript support with exported types
+- ⚡ Lightweight and performant (~1.2KB gzipped)
 - 🎭 Flexible styling options
+- 📘 Complete type definitions included
+- 🔧 Works with React 18+
 
 ## Installation
 
@@ -29,14 +31,27 @@ or
 pnpm add react-intials-avatar-generator
 ```
 
-## Basic Usage
+## Quick Start
 
 ```jsx
 import { InitialsAvatar } from 'react-intials-avatar-generator';
 
 function App() {
   return (
-    <InitialsAvatar name="John Doe" />
+    <div>
+      {/* Basic usage */}
+      <InitialsAvatar name="John Doe" />
+      
+      {/* With custom styling */}
+      <InitialsAvatar 
+        name="Jane Smith"
+        styles={{
+          size: 80,
+          bgColor: "#10b981",
+          textColor: "#ffffff"
+        }}
+      />
+    </div>
   );
 }
 ```
@@ -202,21 +217,92 @@ The component intelligently extracts initials from names:
 
 ## TypeScript Support
 
-The package includes full TypeScript definitions:
+The package includes full TypeScript definitions with automatic type inference. No manual type definitions needed!
+
+### Available Types
+
+The package exports the following types:
+
+- `InitialsAvatar` - The main component
+- `StyleProps` - Type for styling configuration
+- `InitialsAvatarProps` - Type for component props
+- `InitialOptions` - Type for initials extraction options
+- `getInitials` - Utility function for extracting initials
+
+### TypeScript Usage
 
 ```typescript
 import { InitialsAvatar } from 'react-intials-avatar-generator';
-import type { StyleProps, InitialOptions } from 'react-intials-avatar-generator';
+import type { 
+  StyleProps, 
+  InitialsAvatarProps, 
+  InitialOptions 
+} from 'react-intials-avatar-generator';
 
+// Define styles with type safety
 const styles: StyleProps = {
   size: 60,
-  bgColor: "#3b82f6"
+  bgColor: "#3b82f6",
+  textColor: "#ffffff",
+  radius: "50%"
 };
 
+// Define options with type safety
 const options: InitialOptions = {
   maxLength: 2,
-  uppercase: true
+  uppercase: true,
+  fallback: "?"
 };
+
+// Use in your component
+function MyAvatar() {
+  return (
+    <InitialsAvatar 
+      name="John Doe"
+      styles={styles}
+      options={options}
+    />
+  );
+}
+```
+
+### Type Definitions
+
+All types are automatically included when you install the package. TypeScript will provide:
+- ✅ Full autocomplete for all props
+- ✅ Type checking for prop values
+- ✅ IntelliSense documentation
+- ✅ Error detection at compile time
+
+No need to create separate `type.d.ts` files!
+
+## API Reference
+
+### Exported Components and Types
+
+```typescript
+// Component
+export { InitialsAvatar }
+
+// Types
+export type { StyleProps, InitialsAvatarProps, InitialOptions }
+
+// Utility
+export { getInitials }
+```
+
+### Using the getInitials Utility
+
+You can also use the `getInitials` function directly:
+
+```typescript
+import { getInitials } from 'react-intials-avatar-generator';
+
+const initials = getInitials("John Doe", { 
+  maxLength: 2, 
+  uppercase: true 
+});
+// Returns: "JD"
 ```
 
 ## Browser Support
@@ -227,6 +313,13 @@ Works in all modern browsers that support React 18+:
 - Safari (latest)
 - Edge (latest)
 
+## Package Information
+
+- **Size**: ~1.2KB (gzipped)
+- **Dependencies**: React 18+ (peer dependency)
+- **TypeScript**: Full type definitions included
+- **Module Formats**: ESM and UMD
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -235,6 +328,11 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 MIT © Ankit Kumar Pandey
 
+## Repository
+
+- **GitHub**: [https://github.com/Ankit91153/react-initials-avatar](https://github.com/Ankit91153/react-initials-avatar)
+- **Issues**: [https://github.com/Ankit91153/react-initials-avatar/issues](https://github.com/Ankit91153/react-initials-avatar/issues)
+
 ## Keywords
 
-react, avatar, initials, react-avatar, profile-avatar, user-avatar, placeholder-avatar, avatar-component
+react, avatar, initials, react-avatar, profile-avatar, user-avatar, placeholder-avatar, avatar-component, typescript, react-component

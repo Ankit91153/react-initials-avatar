@@ -1,6 +1,6 @@
 import { getInitials, type InitialOptions } from "../utils/getInitials";
 
-interface StyleProps {
+export interface StyleProps {
   size?: number;
   radius?: number | string;
   bgColor?: string;
@@ -13,7 +13,7 @@ interface StyleProps {
   letterSpacing?: number | string;
 }
 
-interface Props {
+export interface Props {
   name: string;
   styles?: StyleProps;
   options?: InitialOptions;
